@@ -1,0 +1,14 @@
+#!name=Block Advertising
+#!desc=Block Advertising
+// Optional: ignore if you need both
+// #!system=(ios/mac)
+
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/TPCTPCTPC/Adblock-gist/master/DOMAINs/EXAMPLE.list,REJECT
+RULE-SET,https://raw.githubusercontent.com/TPCTPCTPC/Adblock-gist/master/URL-REGEX/EXAMPLE.list,REJECT
+
+[Map Local]
+// ^https://an\.example\.com/ad data="empty.json" // You can generate an empty json on your own surge.
+
+[MITM]
+// hostname = %APPEND% an.example.com
