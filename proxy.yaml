@@ -1,4 +1,4 @@
-rules:
+payload:
   - DOMAIN-SUFFIX,ifconfig.me,Proxy
   - DOMAIN-SUFFIX,ipinfo.io,Proxy
   - DOMAIN-SUFFIX,aol.com,Proxy
