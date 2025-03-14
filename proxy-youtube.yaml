@@ -1,0 +1,10 @@
+rules:
+  - DOMAIN-SUFFIX,ggpht.com,Proxy
+  - DOMAIN-SUFFIX,googlevideo.com,Proxy
+  - DOMAIN-SUFFIX,youtu.be,Proxy
+  - DOMAIN-SUFFIX,yt.be,Proxy
+  - DOMAIN-SUFFIX,i.ytimg.com,Proxy
+  - DOMAIN-SUFFIX,ytimg.com,Proxy
+  - DOMAIN-SUFFIX,yt3.ggpht.com,Proxy
+  - DOMAIN-SUFFIX,youtube.googleapis.com,Proxy
+  - DOMAIN-KEYWORD,youtube,Proxy
