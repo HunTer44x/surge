@@ -1,4 +1,4 @@
-rules:
+payload:
   - DOMAIN-SUFFIX,ggpht.com,Proxy
   - DOMAIN-SUFFIX,googlevideo.com,Proxy
   - DOMAIN-SUFFIX,youtu.be,Proxy
