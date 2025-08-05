@@ -73,6 +73,9 @@ DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,rutor.info
 DOMAIN-SUFFIX,autodesk.com
+DOMAIN-SUFFIX,secure4.arcot.com
+DOMAIN-SUFFIX,cloud.google.com
+DOMAIN-SUFFIX,families.google.com
 DOMAIN-KEYWORD,anzu-us
 DOMAIN-KEYWORD,gameloft
 DOMAIN-KEYWORD,kahoot
