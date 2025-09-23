@@ -1,0 +1,16 @@
+# WhatsApp домены
+DOMAIN-SUFFIX,whatsapp.com,VPN
+DOMAIN-SUFFIX,whatsapp.net,VPN
+DOMAIN-KEYWORD,whatsapp,VPN
+
+# WhatsApp IP-адреса (Meta/Facebook)
+IP-CIDR,31.13.64.0/18,VPN,no-resolve
+IP-CIDR,66.220.144.0/20,VPN,no-resolve
+IP-CIDR,69.63.176.0/20,VPN,no-resolve
+IP-CIDR,69.171.224.0/19,VPN,no-resolve
+IP-CIDR,74.119.76.0/22,VPN,no-resolve
+IP-CIDR,173.252.64.0/19,VPN,no-resolve
+IP-CIDR,157.240.0.0/16,VPN,no-resolve
+IP-CIDR,179.60.192.0/22,VPN,no-resolve
+IP-CIDR,185.60.216.0/22,VPN,no-resolve
+IP-CIDR,204.15.20.0/22,VPN,no-resolve
