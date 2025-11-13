@@ -87,6 +87,7 @@ DOMAIN-SUFFIX,chromewebstore.google.com
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,translate.google.com
 DOMAIN-SUFFIX,grammarly.com
+DOMAIN-SUFFIX,plausible.io
 DOMAIN-KEYWORD,anzu-us
 DOMAIN-KEYWORD,gameloft
 DOMAIN-KEYWORD,kahoot
