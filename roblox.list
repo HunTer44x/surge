@@ -1,16 +1,36 @@
-# NAME: Proxy Roblox
+# ================================
+# Roblox core domains
+# ================================
 DOMAIN-SUFFIX,roblox.com
-DOMAIN-SUFFIX,rbxcdn.com
-DOMAIN-SUFFIX,rbxtrk.com
 DOMAIN-SUFFIX,robloxlabs.com
-DOMAIN-SUFFIX,rblxcdn.com
+DOMAIN-SUFFIX,rbxcdn.com
 DOMAIN-SUFFIX,rbximg.com
-IP-CIDR,128.116.0.0/16
-IP-CIDR,129.146.0.0/16
-IP-CIDR,138.68.0.0/16
-IP-CIDR,185.6.64.0/22
-IP-CIDR,185.199.108.0/22
-IP-CIDR,204.79.197.0/24
-IP-CIDR,23.235.32.0/20
-IP-CIDR,34.120.0.0/16
-IP-CIDR,35.190.0.0/17
+DOMAIN-SUFFIX,rblxcdn.com
+DOMAIN-SUFFIX,rbxtrk.com
+
+# ================================
+# Roblox game / api endpoints
+# ================================
+DOMAIN-SUFFIX,robloxusercontent.com
+DOMAIN-SUFFIX,rbxcdn.net
+DOMAIN-SUFFIX,rbxapi.com
+DOMAIN-SUFFIX,rbxevents.com
+
+# ================================
+# Roblox CDN / assets
+# ================================
+DOMAIN-SUFFIX,akamaihd.net
+DOMAIN-SUFFIX,cloudfront.net
+DOMAIN-SUFFIX,fastly.net
+
+# ================================
+# Roblox IPv4 (validated ranges)
+# ================================
+IP-CIDR,128.116.0.0/16,no-resolve
+IP-CIDR,129.146.0.0/16,no-resolve
+IP-CIDR,185.6.64.0/22,no-resolve
+
+# ================================
+# Optional (avatars / thumbnails)
+# ================================
+DOMAIN-SUFFIX,rbxcdn.io
