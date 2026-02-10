@@ -1,18 +1,27 @@
-# Telegram домены
-DOMAIN-SUFFIX,t.me,VPN
-DOMAIN-SUFFIX,telegram.org,VPN
-DOMAIN-SUFFIX,telegra.ph,VPN
-DOMAIN-SUFFIX,cdn-telegram.org,VPN
-DOMAIN-KEYWORD,telegram,VPN
+# ================================
+# Telegram domains
+# ================================
+DOMAIN-SUFFIX,t.me
+DOMAIN-SUFFIX,telegram.org
+DOMAIN-SUFFIX,telegra.ph
+DOMAIN-SUFFIX,telegram-cdn.org
+DOMAIN-SUFFIX,cdn-telegram.org
+DOMAIN-SUFFIX,telesco.pe
 
-# Telegram DC (IPv4)
-IP-CIDR,149.154.160.0/20,VPN,no-resolve
-IP-CIDR,91.108.4.0/22,VPN,no-resolve
-IP-CIDR,91.108.8.0/22,VPN,no-resolve
-IP-CIDR,91.108.12.0/22,VPN,no-resolve
-IP-CIDR,91.108.16.0/22,VPN,no-resolve
-IP-CIDR,91.108.56.0/22,VPN,no-resolve
+# ================================
+# Telegram DC IPv4
+# ================================
+IP-CIDR,149.154.160.0/20,no-resolve
+IP-CIDR,149.154.164.0/22,no-resolve
+IP-CIDR,149.154.168.0/22,no-resolve
 
-# (опционально) IPv6 — если у провайдера есть IPv6
-IP-CIDR6,2001:67c:4e8::/48,VPN,no-resolve
-IP-CIDR6,2001:b28:f23d::/48,VPN,no-resolve
+IP-CIDR,91.108.4.0/22,no-resolve
+IP-CIDR,91.108.8.0/21,no-resolve
+IP-CIDR,91.108.16.0/21,no-resolve
+IP-CIDR,91.108.56.0/22,no-resolve
+
+# ================================
+# Telegram IPv6
+# ================================
+IP-CIDR6,2001:67c:4e8::/48,no-resolve
+IP-CIDR6,2001:b28:f23d::/48,no-resolve
