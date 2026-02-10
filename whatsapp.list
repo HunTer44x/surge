@@ -1,16 +1,34 @@
-# WhatsApp домены
-DOMAIN-SUFFIX,whatsapp.com,VPN
-DOMAIN-SUFFIX,whatsapp.net,VPN
-DOMAIN-KEYWORD,whatsapp,VPN
+# ================================
+# WhatsApp domains
+# ================================
+DOMAIN-SUFFIX,whatsapp.com
+DOMAIN-SUFFIX,whatsapp.net
+DOMAIN-SUFFIX,whatsapp-cdn.net
+DOMAIN-SUFFIX,whatsapp.biz
+DOMAIN-SUFFIX,whatsapp.net
+DOMAIN-SUFFIX,mmg.whatsapp.net
 
-# WhatsApp IP-адреса (Meta/Facebook)
-IP-CIDR,31.13.64.0/18,VPN,no-resolve
-IP-CIDR,66.220.144.0/20,VPN,no-resolve
-IP-CIDR,69.63.176.0/20,VPN,no-resolve
-IP-CIDR,69.171.224.0/19,VPN,no-resolve
-IP-CIDR,74.119.76.0/22,VPN,no-resolve
-IP-CIDR,173.252.64.0/19,VPN,no-resolve
-IP-CIDR,157.240.0.0/16,VPN,no-resolve
-IP-CIDR,179.60.192.0/22,VPN,no-resolve
-IP-CIDR,185.60.216.0/22,VPN,no-resolve
-IP-CIDR,204.15.20.0/22,VPN,no-resolve
+# ================================
+# WhatsApp media / call endpoints
+# ================================
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,whatsapp-cdn.net
+
+# ================================
+# WhatsApp / Meta IP ranges (IPv4)
+# ================================
+IP-CIDR,31.13.64.0/18,no-resolve
+IP-CIDR,66.220.144.0/20,no-resolve
+IP-CIDR,69.63.176.0/20,no-resolve
+IP-CIDR,69.171.224.0/19,no-resolve
+IP-CIDR,74.119.76.0/22,no-resolve
+IP-CIDR,173.252.64.0/19,no-resolve
+IP-CIDR,157.240.0.0/16,no-resolve
+IP-CIDR,179.60.192.0/22,no-resolve
+IP-CIDR,185.60.216.0/22,no-resolve
+IP-CIDR,204.15.20.0/22,no-resolve
+
+# ================================
+# IPv6 (ВАЖНО, если IPv6 включён)
+# ================================
+IP-CIDR6,2a03:2880::/32,no-resolve
