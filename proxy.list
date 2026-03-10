@@ -1,4 +1,7 @@
 # NAME: Proxy
+DOMAIN-KEYWORD,instagram
+DOMAIN-KEYWORD,spotify
+DOMAIN-KEYWORD,deezer
 DOMAIN-SUFFIX,ifconfig.me
 DOMAIN-SUFFIX,ipinfo.io
 DOMAIN-SUFFIX,aol.com
@@ -100,6 +103,4 @@ DOMAIN-SUFFIX,mail.me.com
 DOMAIN-SUFFIX,smartmailcloud.com
 DOMAIN-SUFFIX,cloudfront.net
 DOMAIN-SUFFIX,iterm2.com
-DOMAIN-KEYWORD,instagram
-DOMAIN-KEYWORD,spotify
-DOMAIN-KEYWORD,deezer
+DOMAIN-SUFFIX,atlassian.com
