@@ -74,42 +74,49 @@ rule-providers:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/HunTer44x/surge/main/LAN.list
+    path: ./ruleset/LAN.list
     interval: 86400
 
   SYSTEM:
     type: http
-    behavior: domain
+    behavior: classical
     url: https://raw.githubusercontent.com/HunTer44x/surge/main/SYSTEM.list
+    path: ./ruleset/SYSTEM.list
     interval: 86400
 
   proxy:
     type: http
-    behavior: domain
+    behavior: classical
     url: https://raw.githubusercontent.com/HunTer44x/surge/main/proxy.list
+    path: ./ruleset/proxy.list
     interval: 86400
 
   telegram:
     type: http
-    behavior: domain
+    behavior: classical
     url: https://raw.githubusercontent.com/HunTer44x/surge/main/telegram.list
+    path: ./ruleset/telegram.list
     interval: 86400
 
   whatsapp:
     type: http
-    behavior: domain
+    behavior: classical
     url: https://raw.githubusercontent.com/HunTer44x/surge/main/whatsapp.list
+    path: ./ruleset/whatsapp.list
     interval: 86400
 
   roblox:
     type: http
-    behavior: domain
+    behavior: classical
     url: https://raw.githubusercontent.com/HunTer44x/surge/main/roblox.list
+    path: ./ruleset/roblox.list
     interval: 86400
 
   youtube:
     type: http
-    behavior: domain
+    behavior: classical
     url: https://raw.githubusercontent.com/HunTer44x/surge/main/proxy-youtube.list
+    path: ./ruleset/youtube.list
     interval: 86400
 
 
