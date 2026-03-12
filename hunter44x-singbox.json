@@ -18,9 +18,15 @@
       "type": "selector",
       "tag": "VPN",
       "outbounds": [
-        "proxy",
+        "auto",
         "direct"
       ]
+    },
+
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": []
     },
 
     {
@@ -31,18 +37,13 @@
     {
       "type": "block",
       "tag": "block"
-    },
-
-    {
-      "type": "socks",
-      "tag": "proxy",
-      "server": "127.0.0.1",
-      "server_port": 1
     }
 
   ],
 
   "route": {
+
+    "auto_detect_interface": true,
 
     "rule_set": [
 
