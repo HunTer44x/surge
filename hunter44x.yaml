@@ -21,18 +21,6 @@ dns:
   fake-ip-range: 198.18.0.1/16
 
 
-# ========================
-# BASE PROXIES
-# ========================
-
-proxies:
-
-  - name: DIRECT
-    type: direct
-
-  - name: REJECT
-    type: reject
-
 
 # ========================
 # PROXY PROVIDER (агрегатор)
