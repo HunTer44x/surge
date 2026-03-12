@@ -1,0 +1,159 @@
+{
+  "log": {
+    "level": "warn"
+  },
+
+  "dns": {
+    "servers": [
+      {
+        "tag": "adguard",
+        "address": "https://d.adguard-dns.com/dns-query/eae6ba4f"
+      },
+      {
+        "tag": "local",
+        "address": "local"
+      }
+    ]
+  },
+
+  "outbounds": [
+
+    {
+      "type": "selector",
+      "tag": "VPN",
+      "outbounds": [
+        "proxy",
+        "direct"
+      ]
+    },
+
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+
+    {
+      "type": "block",
+      "tag": "block"
+    },
+
+    {
+      "type": "socks",
+      "tag": "proxy",
+      "server": "127.0.0.1",
+      "server_port": 1
+    }
+
+  ],
+
+  "route": {
+
+    "rule_set": [
+
+      {
+        "tag": "LAN",
+        "type": "remote",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/LAN.list"
+      },
+
+      {
+        "tag": "SYSTEM",
+        "type": "remote",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/SYSTEM.list"
+      },
+
+      {
+        "tag": "proxy",
+        "type": "remote",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/proxy.list"
+      },
+
+      {
+        "tag": "youtube",
+        "type": "remote",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/proxy-youtube.list"
+      },
+
+      {
+        "tag": "geoip",
+        "type": "remote",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/proxy-geoip.list"
+      },
+
+      {
+        "tag": "telegram",
+        "type": "remote",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/telegram.list"
+      },
+
+      {
+        "tag": "whatsapp",
+        "type": "remote",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/whatsapp.list"
+      },
+
+      {
+        "tag": "roblox",
+        "type": "remote",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/roblox.list"
+      }
+
+    ],
+
+    "rules": [
+
+      {
+        "rule_set": "LAN",
+        "outbound": "direct"
+      },
+
+      {
+        "rule_set": "SYSTEM",
+        "outbound": "direct"
+      },
+
+      {
+        "rule_set": "proxy",
+        "outbound": "VPN"
+      },
+
+      {
+        "rule_set": "youtube",
+        "outbound": "VPN"
+      },
+
+      {
+        "rule_set": "geoip",
+        "outbound": "VPN"
+      },
+
+      {
+        "rule_set": "telegram",
+        "outbound": "VPN"
+      },
+
+      {
+        "rule_set": "whatsapp",
+        "outbound": "VPN"
+      },
+
+      {
+        "rule_set": "roblox",
+        "outbound": "VPN"
+      }
+
+    ],
+
+    "final": "direct"
+
+  }
+
+}
