@@ -1,0 +1,11 @@
+This repository stores Surge and Shadowrocket configuration files plus reusable rule lists published from the repository root.
+- `*.conf`: user-specific client configs with sections such as `[General]`, `[Proxy]`, `[Proxy Group]`, `[Rule]`, and `[Host]`.
+- `*.list`: shared rule sets consumed by config files through raw GitHub URLs.
+- `*.sgmodule`: Surge module files.
+- Preserve existing section order and formatting in `*.conf` files unless a change explicitly requires restructuring.
+- Keep rule ordering stable: local/LAN and system-direct rules stay before proxy rules unless asked otherwise.
+- Add new list entries as one rule per line; keep comments concise and avoid duplicate domains or CIDRs.
+- Do not rename published rule files or change raw GitHub paths unless the task explicitly includes that migration.
+- Prefer small, surgical edits because several config files appear to share the same structure with user-specific variations.
+- There is no known automated test suite in this repo.
+- After edits, sanity-check the touched files for section continuity, valid comma-separated rule syntax, and accidental duplicate entries.
