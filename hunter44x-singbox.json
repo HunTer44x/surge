@@ -6,10 +6,6 @@
   "dns": {
     "servers": [
       {
-        "tag": "adguard",
-        "address": "https://d.adguard-dns.com/dns-query/eae6ba4f"
-      },
-      {
         "tag": "local",
         "address": "local"
       }
