@@ -146,4 +146,4 @@ rules:
 
   - GEOIP,RU,DIRECT
 
-  - MATCH,VPN
+  - MATCH,DIRECT
