@@ -1,0 +1,121 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+
+ipv6: true
+
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  nameserver:
+    - system
+
+# -----------------------
+# PROXY PROVIDER (агрегатор)
+# -----------------------
+
+proxy-providers:
+
+  subscription:
+    type: http
+    url: https://aur-ora.com/sub?uuid=e4519b6f-df98-4f20-abac-4c8e52baa6a4
+    interval: 3600
+    health-check:
+      enable: true
+      interval: 600
+      url: https://www.gstatic.com/generate_204
+
+# -----------------------
+# PROXY GROUP
+# -----------------------
+
+proxy-groups:
+
+  - name: VPN
+    type: select
+    use:
+      - subscription
+    proxies:
+      - DIRECT
+
+  - name: AUTO
+    type: url-test
+    use:
+      - subscription
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+
+# -----------------------
+# RULE PROVIDERS
+# -----------------------
+
+rule-providers:
+
+  LAN:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/LAN.list
+    interval: 86400
+
+  SYSTEM:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/SYSTEM.list
+    interval: 86400
+
+  proxy:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/proxy.list
+    interval: 86400
+
+  youtube:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/proxy-youtube.list
+    interval: 86400
+
+  geoip:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/proxy-geoip.list
+    interval: 86400
+
+  telegram:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/telegram.list
+    interval: 86400
+
+  whatsapp:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/whatsapp.list
+    interval: 86400
+
+  roblox:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/roblox.list
+    interval: 86400
+
+# -----------------------
+# RULES
+# -----------------------
+
+rules:
+
+  - RULE-SET,LAN,DIRECT
+  - RULE-SET,SYSTEM,DIRECT
+
+  - RULE-SET,proxy,VPN
+  - RULE-SET,youtube,VPN
+  - RULE-SET,geoip,VPN
+  - RULE-SET,telegram,VPN
+  - RULE-SET,whatsapp,VPN
+  - RULE-SET,roblox,VPN
+
+  - GEOIP,RU,DIRECT
+  - MATCH,DIRECT
