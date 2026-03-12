@@ -1,0 +1,9 @@
+# ================================
+# Android direct access
+# ================================
+DOMAIN-SUFFIX,local
+DOMAIN-SUFFIX,connectivitycheck.android.com
+DOMAIN-SUFFIX,connectivitycheck.gstatic.com
+DOMAIN-SUFFIX,clients3.google.com
+DOMAIN-SUFFIX,android.clients.google.com
+DOMAIN-SUFFIX,mtalk.google.com

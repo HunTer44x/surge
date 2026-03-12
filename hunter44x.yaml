@@ -86,6 +86,22 @@ rule-providers:
     path: ./ruleset/SYSTEM.list
     interval: 86400
 
+  ANDROID:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/ANDROID.list
+    path: ./ruleset/ANDROID.list
+    interval: 86400
+
+  proxy_google:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/proxy-google.list
+    path: ./ruleset/proxy-google.list
+    interval: 86400
+
   proxy:
     type: http
     behavior: classical
@@ -118,15 +134,6 @@ rule-providers:
     path: ./ruleset/roblox.list
     interval: 86400
 
-  youtube:
-    type: http
-    behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/HunTer44x/surge/main/proxy-youtube.list
-    path: ./ruleset/youtube.list
-    interval: 86400
-
-
 # ========================
 # RULES
 # ========================
@@ -135,9 +142,10 @@ rules:
 
   - RULE-SET,LAN,DIRECT
   - RULE-SET,SYSTEM,DIRECT
+  - RULE-SET,ANDROID,DIRECT
 
+  - RULE-SET,proxy_google,VPN
   - RULE-SET,proxy,VPN
-  - RULE-SET,youtube,VPN
   - RULE-SET,telegram,VPN
   - RULE-SET,whatsapp,VPN
   - RULE-SET,roblox,VPN

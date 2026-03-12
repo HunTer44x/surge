@@ -1,0 +1,24 @@
+# NAME: Proxy Google
+DOMAIN-SUFFIX,play.google.com
+DOMAIN-SUFFIX,cloud.google.com
+DOMAIN-SUFFIX,families.google.com
+DOMAIN-SUFFIX,dl.google.com
+DOMAIN-SUFFIX,gvt1.com
+DOMAIN-SUFFIX,gvt2.com
+DOMAIN-SUFFIX,chromewebstore.google.com
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,translate.google.com
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,accounts.google.com
+DOMAIN-SUFFIX,android.apis.google.com
+DOMAIN-SUFFIX,apis.google.com
+DOMAIN-SUFFIX,googleusercontent.com
+DOMAIN-SUFFIX,ggpht.com
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,yt.be
+DOMAIN-SUFFIX,i.ytimg.com
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN-SUFFIX,yt3.ggpht.com
+DOMAIN-SUFFIX,youtube.googleapis.com
+DOMAIN-KEYWORD,youtube
