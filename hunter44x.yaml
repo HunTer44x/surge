@@ -74,58 +74,43 @@ rule-providers:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/HunTer44x/surge/main/LAN.list
-    path: ./rules/LAN.list
     interval: 86400
 
   SYSTEM:
     type: http
-    behavior: classical
+    behavior: domain
     url: https://raw.githubusercontent.com/HunTer44x/surge/main/SYSTEM.list
-    path: ./rules/SYSTEM.list
     interval: 86400
 
   proxy:
     type: http
-    behavior: classical
+    behavior: domain
     url: https://raw.githubusercontent.com/HunTer44x/surge/main/proxy.list
-    path: ./rules/proxy.list
-    interval: 86400
-
-  youtube:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/HunTer44x/surge/main/proxy-youtube.list
-    path: ./rules/youtube.list
-    interval: 86400
-
-  geoip:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/HunTer44x/surge/main/proxy-geoip.list
-    path: ./rules/geoip.list
     interval: 86400
 
   telegram:
     type: http
-    behavior: classical
+    behavior: domain
     url: https://raw.githubusercontent.com/HunTer44x/surge/main/telegram.list
-    path: ./rules/telegram.list
     interval: 86400
 
   whatsapp:
     type: http
-    behavior: classical
+    behavior: domain
     url: https://raw.githubusercontent.com/HunTer44x/surge/main/whatsapp.list
-    path: ./rules/whatsapp.list
     interval: 86400
 
   roblox:
     type: http
-    behavior: classical
+    behavior: domain
     url: https://raw.githubusercontent.com/HunTer44x/surge/main/roblox.list
-    path: ./rules/roblox.list
     interval: 86400
 
+  youtube:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/proxy-youtube.list
+    interval: 86400
 
 
 # ========================
@@ -139,7 +124,6 @@ rules:
 
   - RULE-SET,proxy,VPN
   - RULE-SET,youtube,VPN
-  - RULE-SET,geoip,VPN
   - RULE-SET,telegram,VPN
   - RULE-SET,whatsapp,VPN
   - RULE-SET,roblox,VPN
