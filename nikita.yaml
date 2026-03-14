@@ -1,0 +1,155 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+
+ipv6: true
+
+# ========================
+# DNS
+# ========================
+
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+
+  nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+
+  fake-ip-range: 198.18.0.1/16
+
+
+
+# ========================
+# PROXY PROVIDER (агрегатор)
+# ========================
+
+proxy-providers:
+
+  subscription:
+    type: http
+    url: https://aur-ora.com/sub?uuid=b415b1de-35e9-42e0-9677-e06b494fdfbf
+    path: ./providers/subscription.yaml
+    interval: 3600
+
+    health-check:
+      enable: true
+      interval: 600
+      url: https://www.gstatic.com/generate_204
+
+
+
+# ========================
+# PROXY GROUPS
+# ========================
+
+proxy-groups:
+
+  - name: VPN
+    type: select
+    use:
+      - subscription
+    proxies:
+      - AUTO
+      - DIRECT
+
+  - name: AUTO
+    type: url-test
+    use:
+      - subscription
+    url: https://www.gstatic.com/generate_204
+    interval: 300
+
+
+
+# ========================
+# RULE PROVIDERS
+# ========================
+
+rule-providers:
+
+  LAN:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/LAN.list
+    path: ./ruleset/LAN.list
+    interval: 86400
+
+  SYSTEM:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/SYSTEM.list
+    path: ./ruleset/SYSTEM.list
+    interval: 86400
+
+  ANDROID:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/ANDROID.list
+    path: ./ruleset/ANDROID.list
+    interval: 86400
+
+  proxy_google:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/proxy-google.list
+    path: ./ruleset/proxy-google.list
+    interval: 86400
+
+  proxy:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/proxy.list
+    path: ./ruleset/proxy.list
+    interval: 86400
+
+  telegram:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/telegram.list
+    path: ./ruleset/telegram.list
+    interval: 86400
+
+  whatsapp:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/whatsapp.list
+    path: ./ruleset/whatsapp.list
+    interval: 86400
+
+  roblox:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/HunTer44x/surge/main/roblox.list
+    path: ./ruleset/roblox.list
+    interval: 86400
+
+# ========================
+# RULES
+# ========================
+
+rules:
+
+  - RULE-SET,LAN,DIRECT
+  - RULE-SET,SYSTEM,DIRECT
+  - RULE-SET,ANDROID,DIRECT
+
+  - RULE-SET,proxy_google,VPN
+  - RULE-SET,proxy,VPN
+  - RULE-SET,telegram,VPN
+  - RULE-SET,whatsapp,VPN
+  - RULE-SET,roblox,VPN
+
+  - GEOIP,RU,DIRECT
+
+  - MATCH,DIRECT
