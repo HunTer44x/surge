@@ -19,7 +19,6 @@ This repository stores Surge and Shadowrocket configuration files plus reusable 
 | `ANDROID.list` | Android services → DIRECT |
 | `proxy.list` | General proxy domains |
 | `proxy-google.list` | Google services → VPN |
-| `proxy-youtube.list` | YouTube → VPN |
 | `proxy-geoip.list` | GeoIP-based proxy rules |
 | `telegram.list` | Telegram → VPN |
 | `whatsapp.list` | WhatsApp → VPN |
