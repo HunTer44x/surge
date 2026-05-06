@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain_suffix": [
+        "roblox.com",
+        "robloxlabs.com",
+        "rbxcdn.com",
+        "rbximg.com",
+        "rblxcdn.com",
+        "rbxtrk.com",
+        "robloxusercontent.com",
+        "rbxcdn.net",
+        "rbxapi.com",
+        "rbxevents.com",
+        "akamaihd.net",
+        "cloudfront.net",
+        "fastly.net",
+        "rbxcdn.io"
+      ]
+    },
+    {
+      "ip_cidr": [
+        "128.116.0.0/16",
+        "129.146.0.0/16",
+        "185.6.64.0/22"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain_suffix": [
+        "apple.com",
+        "icloud.com",
+        "icloud-content.com",
+        "apple-cloudkit.com",
+        "cdn-apple.com",
+        "local"
+      ]
+    }
+  ]
+}

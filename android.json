@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain_suffix": [
+        "local",
+        "connectivitycheck.android.com",
+        "connectivitycheck.gstatic.com",
+        "clients3.google.com",
+        "android.clients.google.com",
+        "mtalk.google.com"
+      ]
+    }
+  ]
+}

@@ -128,56 +128,56 @@
         "tag": "lan",
         "type": "remote",
         "format": "source",
-        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/LAN.list",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/LAN.json",
         "update_interval": "24h"
       },
       {
         "tag": "system",
         "type": "remote",
         "format": "source",
-        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/SYSTEM.list",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/SYSTEM.json",
         "update_interval": "24h"
       },
       {
         "tag": "android",
         "type": "remote",
         "format": "source",
-        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/ANDROID.list",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/ANDROID.json",
         "update_interval": "24h"
       },
       {
         "tag": "proxy-google",
         "type": "remote",
         "format": "source",
-        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/proxy-google.list",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/proxy-google.json",
         "update_interval": "24h"
       },
       {
         "tag": "proxy",
         "type": "remote",
         "format": "source",
-        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/proxy.list",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/proxy.json",
         "update_interval": "24h"
       },
       {
         "tag": "telegram",
         "type": "remote",
         "format": "source",
-        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/telegram.list",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/telegram.json",
         "update_interval": "24h"
       },
       {
         "tag": "whatsapp",
         "type": "remote",
         "format": "source",
-        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/whatsapp.list",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/whatsapp.json",
         "update_interval": "24h"
       },
       {
         "tag": "roblox",
         "type": "remote",
         "format": "source",
-        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/roblox.list",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/roblox.json",
         "update_interval": "24h"
       }
     ],
