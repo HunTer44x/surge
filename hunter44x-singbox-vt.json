@@ -72,6 +72,7 @@
       "tag": "VPN",
       "outbounds": [
         "AUTO",
+        "VS7-VLESS",
         "direct"
       ],
       "default": "AUTO"
@@ -80,11 +81,32 @@
       "type": "urltest",
       "tag": "AUTO",
       "outbounds": [
-        "direct"
+        "VS7-VLESS"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
       "tolerance": 50
+    },
+    {
+      "type": "vless",
+      "tag": "VS7-VLESS",
+      "server": "vs7.aur-ora.com",
+      "server_port": 443,
+      "uuid": "e4519b6f-df98-4f20-abac-4c8e52baa6a4",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "mtRoYnt28UYlpT0ZYNKrZVI1ZdCt2AAdC-w6pJLUWz4",
+          "short_id": "80f8"
+        }
+      }
     },
     {
       "type": "direct",
