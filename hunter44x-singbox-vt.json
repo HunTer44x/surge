@@ -1,0 +1,215 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+
+  "dns": {
+    "servers": [
+      {
+        "tag": "remote-dns",
+        "address": "https://1.1.1.1/dns-query",
+        "address_resolver": "local-dns",
+        "strategy": "prefer_ipv4"
+      },
+      {
+        "tag": "local-dns",
+        "address": "https://8.8.8.8/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "fakeip-dns",
+        "address": "fakeip"
+      },
+      {
+        "tag": "block-dns",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "local-dns"
+      },
+      {
+        "rule_set": [
+          "proxy-google",
+          "proxy",
+          "telegram",
+          "whatsapp",
+          "roblox"
+        ],
+        "server": "fakeip-dns",
+        "rewrite_ttl": 1
+      }
+    ],
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/16"
+    },
+    "independent_cache": true,
+    "strategy": "prefer_ipv4"
+  },
+
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": [
+        "172.19.0.1/30"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "prefer_ipv4"
+    }
+  ],
+
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "VPN",
+      "outbounds": [
+        "AUTO",
+        "subscription-out",
+        "direct"
+      ],
+      "default": "AUTO"
+    },
+    {
+      "type": "urltest",
+      "tag": "AUTO",
+      "outbounds": [
+        "subscription-out"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m",
+      "tolerance": 50
+    },
+    {
+      "type": "selector",
+      "tag": "subscription-out",
+      "outbounds": [],
+      "default": ""
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ],
+
+  "route": {
+    "rule_set": [
+      {
+        "tag": "lan",
+        "type": "remote",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/LAN.list",
+        "update_interval": "24h"
+      },
+      {
+        "tag": "system",
+        "type": "remote",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/SYSTEM.list",
+        "update_interval": "24h"
+      },
+      {
+        "tag": "android",
+        "type": "remote",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/ANDROID.list",
+        "update_interval": "24h"
+      },
+      {
+        "tag": "proxy-google",
+        "type": "remote",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/proxy-google.list",
+        "update_interval": "24h"
+      },
+      {
+        "tag": "proxy",
+        "type": "remote",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/proxy.list",
+        "update_interval": "24h"
+      },
+      {
+        "tag": "telegram",
+        "type": "remote",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/telegram.list",
+        "update_interval": "24h"
+      },
+      {
+        "tag": "whatsapp",
+        "type": "remote",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/whatsapp.list",
+        "update_interval": "24h"
+      },
+      {
+        "tag": "roblox",
+        "type": "remote",
+        "format": "source",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/roblox.list",
+        "update_interval": "24h"
+      }
+    ],
+    "rules": [
+      {
+        "type": "logical",
+        "mode": "or",
+        "rules": [
+          { "protocol": "dns" }
+        ],
+        "outbound": "dns-out"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "rule_set": ["lan", "system", "android"],
+        "outbound": "direct"
+      },
+      {
+        "rule_set": [
+          "proxy-google",
+          "proxy",
+          "telegram",
+          "whatsapp",
+          "roblox"
+        ],
+        "outbound": "VPN"
+      },
+      {
+        "geoip": ["ru"],
+        "outbound": "direct"
+      }
+    ],
+    "final": "direct",
+    "auto_detect_interface": true
+  },
+
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_fakeip": true
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "default_mode": "rule"
+    }
+  }
+}
