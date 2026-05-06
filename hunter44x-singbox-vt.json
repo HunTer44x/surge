@@ -72,7 +72,6 @@
       "tag": "VPN",
       "outbounds": [
         "AUTO",
-        "subscription-out",
         "direct"
       ],
       "default": "AUTO"
@@ -81,17 +80,11 @@
       "type": "urltest",
       "tag": "AUTO",
       "outbounds": [
-        "subscription-out"
+        "direct"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m",
       "tolerance": 50
-    },
-    {
-      "type": "selector",
-      "tag": "subscription-out",
-      "outbounds": [],
-      "default": ""
     },
     {
       "type": "direct",
