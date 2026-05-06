@@ -20,10 +20,6 @@
       {
         "tag": "fakeip-dns",
         "address": "fakeip"
-      },
-      {
-        "tag": "block-dns",
-        "address": "rcode://success"
       }
     ],
     "rules": [
@@ -111,14 +107,6 @@
     {
       "type": "direct",
       "tag": "direct"
-    },
-    {
-      "type": "block",
-      "tag": "block"
-    },
-    {
-      "type": "dns",
-      "tag": "dns-out"
     }
   ],
 
@@ -128,21 +116,21 @@
         "tag": "lan",
         "type": "remote",
         "format": "source",
-        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/LAN.json",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/lan.json",
         "update_interval": "24h"
       },
       {
         "tag": "system",
         "type": "remote",
         "format": "source",
-        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/SYSTEM.json",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/system.json",
         "update_interval": "24h"
       },
       {
         "tag": "android",
         "type": "remote",
         "format": "source",
-        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/ANDROID.json",
+        "url": "https://raw.githubusercontent.com/HunTer44x/surge/main/android.json",
         "update_interval": "24h"
       },
       {
@@ -188,7 +176,7 @@
         "rules": [
           { "protocol": "dns" }
         ],
-        "outbound": "dns-out"
+        "action": "hijack-dns"
       },
       {
         "ip_is_private": true,
